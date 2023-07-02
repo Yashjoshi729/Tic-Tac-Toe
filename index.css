@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+nav{
+    background-color: rgb(50, 44, 44);
+    color: aliceblue;
+    height: 2.8rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Roboto',sans-serif;
+}
+
+nav ul{
+    list-style-type:none;    
+}
+
+.gamecontainer{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    /* margin-top: 50px;     */
+    height: 100vh;
+    background-image: linear-gradient(red , blue);
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'roboto';
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.box{
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(184, 241, 111);
+}
+
+.info{
+    font-size: 25px;
+    margin: 20px;
+    padding: 10px 10px 0 10px;
+}
+.gameinfo{
+    padding: 34px;
+    font-family: cursive;
+}
+.gameinfo h1{
+    font-size: 2.5rem;
+}
+.image img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 20px 20px;
+    padding: 17px 40px;
+    background-color: rgb(177, 69, 235);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.line{
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(175, 126, 232);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width:800px) {
+
+    .gamecontainer{
+        flex-wrap: wrap;
+        height: 120vh;
+    }
+    .gameinfo{
+        margin-top: 32px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+    .line{
+        width: 0px;
+    }
+    .small{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+    }
+}
